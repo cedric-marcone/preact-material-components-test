@@ -5,7 +5,7 @@ import {Select} from 'preact-material-components'
 import 'preact-material-components/Menu/style.css';
 import 'preact-material-components/Select/style.css';
 
-function range () {
+const generate = () => {
   const xs = []; let i = 0
   for (let i = 0; i < 10; i++) xs.push(i*100)
   return xs
@@ -14,7 +14,7 @@ function range () {
 export default class Home extends Component {
  state = {
    value: 200,
-   values: range(1, 10)
+   values: generate()
  }
 
  selectedChanged = () => {
